@@ -1,0 +1,11 @@
+--- a/setup.php
++++ b/setup.php
+@@ -59,7 +59,7 @@
+     define("APP_PATH", normalize_path(dirname(dirname(dirname(dirname(__FILE__)))), false));
+
+     define("ROOT_HREF", normalize_path(dirname(APP_HREF), true));
+-    define("ROOT_PATH", normalize_path(dirname(APP_PATH), false));
++    define("ROOT_PATH", '/var/www', false);
+
+     $uri_parts = parse_url(getenv("REQUEST_URI"));
+     $current_href = normalize_path($uri_parts["path"], true);
